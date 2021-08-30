@@ -1,3 +1,7 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+# retorna o template que devolve "Ola mundo!"
+def ola_mundo(request):
+    # chamamos o template ola_mundo.html
+    return render(request, 'ola_mundo.html')
