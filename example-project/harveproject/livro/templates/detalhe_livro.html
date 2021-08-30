@@ -1,3 +1,11 @@
-<p> Nome do livro: {{livro.nome}} <p>
-<p> Nome do autor: {{livro.nome_autor}} <p>
-<p> Número de páginas {{livro.paginas}} <p>
+{% load static %}
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/livro.css' %}">
+    </head>
+    <body>
+        <p> Nome do livro: {{livro.nome}} <p>
+        <p> Nome do autor: {{livro.nome_autor}} <p>
+        <p> Número de páginas {{livro.paginas}} <p>
+    </body>
+</html>
