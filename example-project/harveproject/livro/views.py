@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from django.shortcuts import get_object_or_404
 
 from .models import Livro
 
@@ -14,3 +15,10 @@ def exibe_livros(request):
     livros = Livro.objects.all()
     context = {'lista_livros': livros}
     return render(request, 'exibe_livros.html', context=context)
+
+
+# view responsavel por carregar um livro dado o indice
+def detalhe_livro(request, indice_livro):
+    livro = get_object_or_404(Livro, pk=indice_livro)
+    context = {'livro': livro}
+    return render(request, 'detalhe_livro.html', context)
