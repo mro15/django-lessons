@@ -16,6 +16,8 @@
 
 <ul>
     {% for livro in lista_livros %}
-        <li><a href="{% url 'livro:detalhe_livro' livro.id %}">{{ livro.nome}}</a></li>
+        <li>
+            <a href="{% url 'livro:detalhe_livro' livro.id %}">{{ livro.nome}}</a>
+        </li>
     {% endfor %}
 </ul>
