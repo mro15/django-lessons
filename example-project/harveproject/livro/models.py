@@ -1,4 +1,7 @@
 from django.db import models
 
-# Create your models here.
-#class Livro(models.Model):
+
+class Livro(models.Model):
+    nome = models.CharField(max_length=200)
+    nome_autor = models.CharField(max_length=200)
+    paginas = models.IntegerField()

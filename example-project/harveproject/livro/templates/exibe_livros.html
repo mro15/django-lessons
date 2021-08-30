@@ -1,0 +1,15 @@
+
+<p>Lista de livros</p>
+<p>{{lista_livros}}</p>
+
+<ul>
+    {% for livro in lista_livros %}
+        <li>{{livro}}</li>
+    {% endfor %}
+</ul>
+
+<ul>
+    {% for livro in lista_livros %}
+        <li>{{livro.nome}} {{livro.nome_autor}} {{livro.paginas}}</li>
+    {% endfor %}
+</ul>
